@@ -1,6 +1,6 @@
 <html>
     <head >
-        
+        <title>GreenFeet Adventures</title>
         <!-- <script src="webjars/jquery/3.4.1/jquery.min.js"></script>
         <script src="webjars/angularjs/1.7.7/angular.min.js"></script>
         <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
@@ -8,6 +8,7 @@
         <!-- For development purpose only -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
 
         <script src= "js/app.js" ></script>
@@ -17,8 +18,14 @@
         <script src="js/app.js"></script>
         <script src="ext-modules/framework/frameworkDirective.js"></script>
         <script src="ext-modules/framework/frameworkController.js"></script>
+        <script src="ext-modules/menu/menuModule.js"></script>
+        <script src="ext-modules/menu/menuDirective.js"></script>
+        <script src="ext-modules/menu/menuController.js"></script>
+        <script src="ext-modules/menu/menuItemDirective.js"></script>
         <link rel="stylesheet" href="css/TimeTravel.css"/>
         <link rel="stylesheet" href="ext-modules/framework/framework.css"></link>
+        <link rel="stylesheet" href="ext-modules/menu/menu.css"></link>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -26,9 +33,18 @@
 
 
     </head>
-    <body ng-app="framework" class="container-fluid">
-        <div>
-            <cd-framework>   </cd-framework>
+    <body ng-app="framework">
+        <div >
+            <cd-framework title="GreenFeet Adventures"
+                          subtitle= "Administrative Application"
+                          icon-file = "images/icon-flat.jpg"> 
+                <cd-menu>
+                   <cd-menu-item label="Dashboard" icon="fa-dashboard"  route="dashboard"></cd-menu-item>
+                   <cd-menu-item label="Location"  icon="fa-location-arrow"  route="locations"></cd-menu-item>
+                   <cd-menu-item label="Raft Guides" icon="fa-user" route="guides"></cd-menu-item>
+
+                </cd-menu>
+            </cd-framework>
         </div>
             
         <!-- <h2>Hello World!</h2>

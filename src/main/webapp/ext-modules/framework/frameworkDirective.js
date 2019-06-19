@@ -5,6 +5,9 @@ angular.module("framework").directive("cdFramework", function () {
     return {
         transclude: true,
         scope: {
+            title: '@',
+            subtitle: '@',
+            iconFile: '@'
 
         },
         controller: "frameworkController",

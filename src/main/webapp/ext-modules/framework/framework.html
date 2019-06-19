@@ -3,14 +3,53 @@
 <h3>Hello {{name}}</h3> -->
 
  <div class="title-bar">
-     <div class="logo-area">
-        <img class="icon" ng-src="" />
-        <div class="title">
-            <p class="logo-title">GreenFeet Adventures</p>
-            <p class="logo-subtitle">Administrative App</p>
+   <div class="row">
+     <div class="logo-area col-sm-6">
+        <img class="cd-icon" ng-src="" />
+        <div class="title-area">
+            <p class="logo-title">{{title}}</p>
+            <p class="logo-subtitle">{{subtitle}}</p>
+        </div>
+        <div ng-if= "isMenuButtonVisible" ng-click="menuButtonClicked()"
+        class="collapsed-menu  pull-right">
+      <button type="button" class="btn nav-button">
+        <i class="fa fa-bars"></i>
+      </button>
+      </div>
+     </div>
+      
+     <div class="right-side-controls  col-sm-6">
+        <div>
+          <button class="btn btn-primary">Button 1</button>
+          <button class="btn btn-success">Button 2</button>
+          <button class="btn btn-warning">Button 3</button>
         </div>
      </div>
-     <div class="right-side-controls">
-        
-     </div>
+    </div>
+
  </div>
+
+ <!-- <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">{{title}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">{{subtitle}}</a>
+        </li>  
+      </ul>
+    </div> 
+   
+  </nav> -->
+  <div ng-transclude>
+        
+  </div>
+
+  <div style="position: absolute; left: 220px; color:red;">
+     Hello {{routeString}}
+  </div>
