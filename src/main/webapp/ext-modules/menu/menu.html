@@ -1,3 +1,18 @@
-<nav class="navbar bg-dark navbar-dark" id="menu">
+<!-- <nav class="navbar bg-dark navbar-dark" id="menu" ng-show="showMenu">
     <ul class="navbar-nav" ng-transclude></ul>
-</nav>
+    <a class="btn  menu-layout-button" ng-click="toggleMenuOrientation()">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</nav> -->
+
+<div class="menu-area" ng-show="showMenu"
+    ng-class="{'menu-area-vertical': isVertical,  'menu-area-horizontal': !isVertical}">
+    <ul class="menu" ng-transclude></ul>
+    <a class="btn  menu-layout-button" 
+       ng-show="allowHorizontalToggle"
+       ng-class = "{'layout-button-horizontal': !isVertical }"
+       ng-click="toggleMenuOrientation()">
+        <i class="fa"
+         ng-class="{'fa-chevron-up': isVertical, 'fa-chevron-left': !isVertical}" ></i>
+    </a>
+</div>

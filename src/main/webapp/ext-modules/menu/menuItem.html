@@ -1,9 +1,20 @@
-<li class="nav-item">  
+<!-- <li class="nav-item">  
     <div>
         <i class="fa {{icon}} menu-icon"></i>
         {{label}}
     </div>
     <div>
         <i class="fa fa-2x fa-caret-left menu-active-indicator" ng-if="isActive()"></i>
+    </div>
+</li> -->
+
+
+<li class="selectable-item"  ng-class="{'item-horizontal': !isVertical() }">  
+    <div class="no-select">
+        <i class="fa {{icon}} menu-icon"></i>
+        {{label}}
+    </div>
+    <div>
+        <i ng-if="isActive() && isVertical()" class="fa fa-2x fa-caret-left menu-active-indicator" ></i>
     </div>
 </li>

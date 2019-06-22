@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-animate.js"></script>
 
         <script src= "js/app.js" ></script>
         <script src="ext-modules/dashboard/dashboardModule.js"></script>
@@ -22,6 +23,8 @@
         <script src="ext-modules/menu/menuDirective.js"></script>
         <script src="ext-modules/menu/menuController.js"></script>
         <script src="ext-modules/menu/menuItemDirective.js"></script>
+        <script src="ext-modules/menu/menuGroupDirective.js"></script>
+
         <link rel="stylesheet" href="css/TimeTravel.css"/>
         <link rel="stylesheet" href="ext-modules/framework/framework.css"></link>
         <link rel="stylesheet" href="ext-modules/menu/menu.css"></link>
@@ -42,7 +45,11 @@
                    <cd-menu-item label="Dashboard" icon="fa-dashboard"  route="dashboard"></cd-menu-item>
                    <cd-menu-item label="Location"  icon="fa-location-arrow"  route="locations"></cd-menu-item>
                    <cd-menu-item label="Raft Guides" icon="fa-user" route="guides"></cd-menu-item>
-
+                   <cd-menu-group label="Equipment" icon="fa-gears">
+                       <cd-menu-item label="Rafts" icon="fa-unlink" route="rafts"></cd-menu-item>
+                       <cd-menu-item label="Paddles" icon="fa-magic" route="paddles"></cd-menu-item>
+                       <cd-menu-item label="Life Vests"  icon="fa-life-ring" route="vests"></cd-menu-item>
+                   </cd-menu-group>
                 </cd-menu>
             </cd-framework>
         </div>
