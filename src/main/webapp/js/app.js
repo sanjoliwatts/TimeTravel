@@ -1,4 +1,4 @@
 
 "use strict";
 
-    var app = angular.module("MainModule",[]);
+    var app = angular.module("MainModule",['cdFramework','ngRoute']);

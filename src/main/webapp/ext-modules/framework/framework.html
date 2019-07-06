@@ -50,6 +50,7 @@
         
   </div>
 
-  <div style="position: absolute; left: 220px; color:red;">
+  <!-- <div style="position: absolute; left: 220px; color:red;">
      Hello {{routeString}}
-  </div>
+  </div> -->
+  <div ng-view class="view" ng-class="{'view-full-width': !isMenuVertical || !isMenuVisible }"

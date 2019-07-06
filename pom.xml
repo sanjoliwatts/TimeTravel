@@ -51,6 +51,12 @@
         <artifactId>font-awesome</artifactId>
         <version>5.8.2</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.webjars.bower/angular-route -->
+    <dependency>
+        <groupId>org.webjars.bower</groupId>
+        <artifactId>angular-route</artifactId>
+        <version>1.7.7</version>
+    </dependency>
 
 
   </dependencies>

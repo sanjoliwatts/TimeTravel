@@ -8,6 +8,7 @@ angular.module("framework").controller("frameworkController",[
 
         $scope.$on('menu-item-selected-event', function(evt, data) {
             $scope.routeString = data.route;
+            $location.path(data.route);
             checkWidth();
             broadcastMenuState();  
             console.log("Hi "+$scope.routeString);
